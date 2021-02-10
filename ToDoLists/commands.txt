@@ -1,0 +1,1 @@
+java --module-path  %PATH_TO_FX% --add-modules javafx.controls,javafx.fxml -p ../com.sample.control/com.sample.control.jar;../com.sample.storage/com.sample.storage.jar;../com.sample/com.sample.jar;%PATH_TO_FX%\javafx.controls.jar;%PATH_TO_FX%\javafx.fxml.jar;%PATH_TO_FX%\javafx.base.jar;%PATH_TO_FX%\javafx.graphics.jar -m com.sample/com.sample.Main

@@ -1,0 +1,15 @@
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<DialogPane fx:controller="com.sample.control.DateDialogControls"
+			xmlns:fx="http://javafx.com/fxml" >
+	<headerText>
+		reset date::
+	</headerText>
+	<content>
+		<GridPane>
+			<Label text="new Due Date: " GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+			<DatePicker fx:id="date"  GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+		</GridPane>
+	</content>
+</DialogPane>

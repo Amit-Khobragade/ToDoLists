@@ -1,0 +1,75 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.*?>
+
+<BorderPane fx:controller="com.sample.control.Controls"
+			xmlns:fx="http://javafx.com/fxml" fx:id="borderPane" >
+	<top>
+		<HBox spacing="10" alignment="top_left">
+			<Button fx:id="newButton" text="New" onAction="#handleMouseClick" prefWidth="100" prefHeight="32">
+				<tooltip>
+					<Tooltip text="Add a new task"/>
+				</tooltip>
+				<graphic>
+					<ImageView>
+						<Image  url="@com/sample/New24.gif"/>
+					</ImageView>
+				</graphic>
+			</Button>
+			<Button onAction="#handleDeleteItem" text="Delete" prefWidth="100" prefHeight="32">
+				<tooltip>
+					<Tooltip text="delete the selected item"/>
+				</tooltip>
+				<graphic>
+					<ImageView>
+						<Image url="@rsrcs/Delete24.gif"/>
+					</ImageView>
+				</graphic>
+			</Button>
+			<Button fx:id="edit" text="edit" onAction="#handleMouseClick" prefWidth="100" prefHeight="32">
+				<tooltip>
+					<Tooltip text="edit the selected item"/>
+				</tooltip>
+				<graphic>
+					<ImageView>
+						<Image url="@rsrcs/Edit24.gif"/>
+					</ImageView>
+				</graphic>
+			</Button>
+			<fx:define>
+				<ToggleGroup fx:id="filterGroup" />
+			</fx:define>
+			<MenuButton text="filters" prefHeight="32">
+				<items>
+					<RadioMenuItem text="due today" fx:id="filterToday" onAction="#handleFilters" toggleGroup="$filterGroup"/>
+					<RadioMenuItem text="due tomorrow" fx:id="filterTomorrow" onAction="#handleFilters" toggleGroup="$filterGroup"/>
+					<RadioMenuItem text="already due" fx:id="filterAlreadyDue" onAction="#handleFilters" toggleGroup="$filterGroup"/>
+					<RadioMenuItem text="completed" fx:id="filterCompleted" onAction="#handleFilters" toggleGroup="$filterGroup"/>
+					<RadioMenuItem text="show all" fx:id="filterAll" onAction="#handleFilters" toggleGroup="$filterGroup"/>
+				</items>
+			</MenuButton>
+		</HBox>
+	</top>
+	<left>
+		<ListView fx:id="title"  >
+		</ListView>
+	</left>
+	<center>
+		<VBox style="-fx-background-color: white">
+			<TextArea fx:id="description" VBox.vgrow="ALWAYS" wrapText="true" />
+			<HBox prefHeight="20">
+				<VBox  prefWidth="200" alignment="center_left">
+					<Label fx:id="timePeriod" onMouseClicked="#handleMouseClick"/>
+				</VBox>
+				<VBox >
+					<Label fx:id="status" style="-fx-font-alignment: right"/>
+					<padding>
+						<Insets left="20"/>
+					</padding>
+				</VBox>
+			</HBox>
+		</VBox>
+	</center>
+</BorderPane>

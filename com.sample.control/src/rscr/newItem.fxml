@@ -1,0 +1,16 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane fx:controller="com.sample.control.NewItem"
+			xmlns:fx="http://javafx.com/fxml">
+	<content>
+		<GridPane hgap="10" vgap="10">
+			<Label text="title: " GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+			<TextField fx:id="title" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+			<Label text="description: " GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+			<TextArea fx:id="description" GridPane.rowIndex="1" GridPane.columnIndex="1" wrapText="true" />
+			<Label text="Due Date: " GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+			<DatePicker fx:id="dueDate" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+		</GridPane>
+	</content>
+</DialogPane>
