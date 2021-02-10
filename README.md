@@ -5,4 +5,6 @@ eclipse supported to-do lists with modules for easier understanding
 2) create an eviornment variable "PATH_TO_FX" for the todolists .exe to work 
 3) just run to-do lists.exe in the ToDoLists folder
 
-[source code for command runner](https://github.com/Amit-Khobragade/auto_command_to_exe)
+>[source code for command runner](https://github.com/Amit-Khobragade/auto_command_to_exe)
+
+note: after editing any files recontruct the jar files using the jardesc file in the given modules
