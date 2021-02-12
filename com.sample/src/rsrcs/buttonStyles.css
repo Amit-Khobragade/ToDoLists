@@ -1,3 +1,23 @@
-#newButton{
-	-fx-image: url("rsrcs/New24.gif")
+#newButton { 
+   -fx-background-image: url('NewItem.gif');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 10%;
+    -fx-background-color: transparent;
+}
+
+#deleteButton {
+	-fx-background-image: url('DeleteItem.gif');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 10%;
+    -fx-background-color: transparent;
+}
+
+#edit {
+	-fx-background-image: url('EditItem.gif');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 10%;
+    -fx-background-color: transparent;
 }
